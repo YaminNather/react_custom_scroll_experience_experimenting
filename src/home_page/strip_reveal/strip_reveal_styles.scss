@@ -1,0 +1,39 @@
+.strip_reveal {
+  position: relative;
+  display: inline;  
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;    
+    height: 200%;    
+    background-color: rgba(black, 1.0);
+    transform: translateY(-50%);
+    // animation: reveal_animation 3000ms;
+  }
+
+  @keyframes reveal_animation {
+    from {
+      left: 0%;
+      right: 100%;
+    }
+
+    70% {
+      left: 0%;
+      right: 0%;
+    }
+    
+    to {
+      left: 100%;
+      right: 0%;
+    }
+  }
+}
+
+.strip_reveal_animation {
+  @extend .strip_reveal;
+
+  &::after {
+    animation: reveal_animation 1000ms;
+  }
+}

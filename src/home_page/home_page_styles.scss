@@ -1,0 +1,26 @@
+.home_page {
+  width: 100vw;
+  height: 100vh;
+
+  .slide_in_view {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1730;
+    transition: 300ms;    
+  }
+
+  .slide_out_of_view {
+    @extend .slide_in_view;
+    
+    transform: translateY(100%);
+  }
+
+  .box {
+    width: 256px;
+    height: 256px;
+    background-color: #EF4658;
+  }
+}

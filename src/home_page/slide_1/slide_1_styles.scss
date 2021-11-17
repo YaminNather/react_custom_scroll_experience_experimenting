@@ -1,0 +1,53 @@
+.slide_1_base {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #1b1730;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  transition: 300ms;
+
+  .card {
+    display: flex;
+    width: 160px;
+    height: 160px;
+  }
+
+  .slide_index_card {
+    @extend .card;    
+
+    background-color: rgb(36, 46, 68);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .age_factor_card {
+    @extend .card;
+
+    background-color: rgb(36, 46, 68);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.slide_1_in_view {
+  @extend .slide_1_base;  
+
+  .text {
+    color: red;
+    transition: color 5000ms;
+  }  
+}
+
+.slide_1_out_of_view {
+  @extend .slide_1_base;
+  
+  opacity: 0.0;
+
+  .text {
+    color: green;
+  }
+}
